@@ -34,7 +34,7 @@ def populateIgnoreWords():
 ignoreWords = populateIgnoreWords()
 
 print("Sifting through data...")
-with open('Data/train.csv') as file:
+with open('../Data/train.csv') as file:
     fileReader = csv.reader(file, delimiter=',')
     for row in fileReader:
         wordsInTweet = tokenizeString(row[3])
@@ -76,6 +76,3 @@ with open('Data/train.csv') as file:
             outputfile.write(str(i))
             outputfile.write("\n")
     print("Data written... Process Complete.")
-
-   
-  
